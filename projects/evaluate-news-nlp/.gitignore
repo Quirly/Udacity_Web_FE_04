@@ -1,3 +1,4 @@
 node_modules
 dist
-./src/apikey.txt
+./src/apikey.js
+./src/.env

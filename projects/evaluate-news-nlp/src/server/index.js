@@ -4,6 +4,10 @@ const mockAPIResponse = require('./mockAPI.js')
 
 const app = express()
 
+var textapi = new meaningCloud({
+    application_key: "your-key"
+});
+
 app.use(express.static('dist'))
 
 console.log(__dirname)
