@@ -6,6 +6,8 @@ body {
 
 main {
     flex: 2;
+    background-color: azure;
+    background-image: '/Users/quirly/Documents/FrontEnd/Udacity_Web_FE_Project_04/projects/evaluate-news-nlp/src/client/images/AdobeStock_274373053.jpeg';
 }
 
 section {
