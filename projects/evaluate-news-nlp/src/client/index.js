@@ -1,11 +1,22 @@
-import { checkForName } from './js/nameChecker'
+// Import all functions
 import { handleSubmit } from './js/formHandler'
+import { getAPIKEY } from './js/getAPIKEY'
+import { getSentiment } from './js/getSentiment'
+import { checkForName } from './js/nameChecker'
+import { updateUI } from './js/updateUI'
 
-console.log(checkForName);
+// Import all styles
+import './styles/resets.scss'
+import './styles/base.scss'
+import './styles/form.scss'
+import './styles/footer.scss'
+import './styles/header.scss'
 
-alert("I EXIST")
-console.log("CHANGE!!");
+export {
+    handleSubmit,
+    getAPIKEY,
+    getSentiment,
+    checkForName,
+    updateUI
+}
 
-/* Global Variables */
-const baseURL1 = 'https://api.meaningcloud.com/sentiment-2.1'
-const baseURL2 = 'multipart/form-data'

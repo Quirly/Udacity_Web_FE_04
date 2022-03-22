@@ -5,13 +5,13 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const { response } = require('express');
 
-// Require API modules
+// Require customized API modules
 const mockAPIResponse = require('./mockAPI.js')
-const fetchAPI = require('./meaningCloud');
 
 // Set Up Dot Environment
 const dotenv = require('dotenv');
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
+console.log(path.resolve(__dirname, "../.env"));
 
 // Start up an instance of app
 const app = express();
@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // Cors for cross origin allowance
 app.use(cors());
+app.use(express.static('/Users/quirly/Documents/FrontEnd/Udacity_Web_FE_Project_04/projects/evaluate-news-nlp/dist'))
 
 // Setup Server
 const port = 3000
@@ -34,18 +35,28 @@ function listening() {
 }
 
 //Integrate API key
-const application_key = process.env.API_KEY
-console.log(application_key)
+const APIKEY = process.env.API_KEY;
+console.log(APIKEY);
 
 // Initialize the main project folder
-app.use(express.static('dist'))
+//app.use(express.static(path.join(__dirname, 'styles')));
 
 // Routes
+
+// Route UI
 app.get('/', function (req, res) {
     // res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('src/client/views/index.html'))
+    res.sendFile(path.resolve('dist/index.html'))
 })
 
+// Route APIKEY
+app.get('/apikey', function (req, res) {
+    // res.sendFile('dist/index.html')
+    res.send(APIKEY)
+})
+
+// Route TEST
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
+

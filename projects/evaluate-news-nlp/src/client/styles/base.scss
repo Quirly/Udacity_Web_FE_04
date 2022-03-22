@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('AdobeStock_274373053.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    display:flex;
+    flex-direction:row;
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color:azure;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    border-radius: 10px;
+}
+
+#resultbox{
+    border: 5px solid cadetblue;
+    background-color:blanchedalmond;
+    padding: 5px 20px;
+    height:370px;
+    width:20%;
+    border-radius: 10px;
+    padding: 40px;
+} 
