@@ -7,7 +7,7 @@
 const getSentiment = async (baseURL1, baseURL2, url1, apiKey, userText) => {
 
     let userTextString = (userText).toString()
-    const res = await fetch(baseURL1 + url1 + apikey + baseURL2 + userTextString)
+    const res = await fetch(baseURL1 + url1 + apiKey + baseURL2 + userTextString)
 
     try {
         const data = await res.json();

@@ -22,8 +22,11 @@ const handleSubmit = async (event) => {
     // check text in input box before performing API call
     let resultCheck1 = await Client.checkForName(formText)
     if (resultCheck1 == "fail") {
-        console.log("fail")
+        console.log("Result check failed.")
         return
+    }
+    else {
+        console.log("Result check successful.")
     }
     // read APIKEY
     const apiKey = await Client.getAPIKEY()
@@ -31,11 +34,15 @@ const handleSubmit = async (event) => {
         console.log("Could not fetch APIKEY")
         return
     }
+    else {
+        console.log("APIKEY call successful.")
+        console.log(apiKey)
+    }
     // make fetch call and get sentiment analysis from MeaningCloud API
-    let SentimentDataObject = await Client.getSentiment(baseURL1, baseURL2, url1, apiKey, userText)
+    let SentimentDataObject = await Client.getSentiment(baseURL1, baseURL2, url1, apiKey, formText)
     // show api response in console for control purposes
     console.log('API MeaningCloud response got back is: ')
-    console.log(data)
+    console.log(SentimentDataObject)
 
     // update UI
     Client.updateUI(SentimentDataObject.polarity, SentimentDataObject.agreement, SentimentDataObject.subjectivity, SentimentDataObject.confidence, SentimentDataObject.irony)
