@@ -3,7 +3,7 @@
 const getAPIKEY = async () => {
 
     try {
-        const res = await fetch('http://localhost:8080/apikey')
+        const res = await fetch('http://localhost:3000/apikey')
             .then(res => {
                 return res.text()
                 console.log("APIKEY request successful.")
