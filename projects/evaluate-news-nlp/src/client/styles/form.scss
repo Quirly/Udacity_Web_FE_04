@@ -1,6 +1,6 @@
 form {
-    border: 5px solid cadetblue;
-    background-color:white;
+    border: 5px solid white;
+    background-color:aquamarine;
     width:40vw;
     border-radius: 10px;
     padding: 40px;
@@ -15,32 +15,37 @@ form {
 .userInput {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    margin: 50px auto;
-    background-color:lightgray;
+    background-color:white;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
+    width:100vw;
+}
+
+textarea{
+    border: 5px solid aquamarine;
 }
 
 #submit_button {
     height: 7vh;
-    width: 100vw;
+    width: 80vw;
     border-radius: 10px;
     font-size: 16px;
+    font-weight: 400;
     background-color: aquamarine;
 }
+
 
 #input_text {
     font-size: 12px;
     border-radius: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    align-items: center;
+    align-items: top;
     height: 20vh;
-    width: 50vw;
+    width: 80vw;
     padding: 10px 10px 10px 10px;
     margin-bottom: 20px;
+    vertical-align: top;
 }
 
 @media(min-width:760px) {
@@ -48,7 +53,43 @@ form {
     .userInput {
         display: flex;
         flex-direction: column;
-        width: 58vw;
+        width: 50vw;
+        height: 40vh;
+        margin: 50px auto;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #input_text {
+        font-size: 12px;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-items: top;
+        height: 40vh;
+        width: 45vw;
+        padding: 10px 10px 10px 10px;
+        margin-bottom: 20px;
+        vertical-align: top;
+    }
+
+    #submit_button {
+        height: 7vh;
+        width: 45vw;
+        border-radius: 10px;
+        font-size: 16px;
+        background-color: aquamarine;
+    }
+
+    
+} 
+
+@media(min-width:920px) {
+    
+    .userInput {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
         height: 40vh;
         margin: 50px auto;
         border-radius: 10px;
@@ -57,12 +98,12 @@ form {
     }
 
     #submit_button {
-        height: 7vh;
-        width: 50vw;
+        height: 10vh;
+        width: 45vw;
         border-radius: 10px;
         font-size: 16px;
         background-color: aquamarine;
     }
-    
+
     
 }    
