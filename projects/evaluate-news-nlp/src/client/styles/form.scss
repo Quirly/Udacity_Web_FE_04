@@ -36,13 +36,14 @@ input {
 }
 
 #input_text {
-    height: 200px;
+    width: 80vw;
+    height: 40vh;
 }
 
 @media(min-width:760px) {
 
     .userInput{
-        width: 40vw;
+        width: 80vw;
         height: 40vh;
         align-items: stretch;
     }
