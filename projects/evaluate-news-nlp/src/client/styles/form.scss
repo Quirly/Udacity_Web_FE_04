@@ -1,51 +1,68 @@
 form {
-    border: 5px solid blanchedalmond;
-    background-color: cadetblue;
-    width:800px;
+    border: 5px solid cadetblue;
+    background-color:white;
+    width:40vw;
     border-radius: 10px;
     padding: 40px;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top: 10vh;
+    right: 1vw;
 }
 
-input {
-    padding: 5px 20px;
-    width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
-    border-radius: 10px;
-}
 
 .userInput {
-    font-size: 14px;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: 40vh;
+    height: 100vh;
     margin: 50px auto;
-    background-color:cadetblue;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
+    background-color:lightgray;
     border-radius: 10px;
-    font-size: 18px;
-    border: 5px solid blanchedalmond;
-    vertical-align: top;
+    align-items: center;
+    justify-content: center;
 }
 
 #submit_button {
-    height: 80px;
+    height: 7vh;
+    width: 100vw;
     border-radius: 10px;
     font-size: 16px;
     background-color: aquamarine;
 }
 
 #input_text {
-    width: 80vw;
-    height: 40vh;
+    font-size: 12px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    height: 20vh;
+    width: 50vw;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 20px;
 }
 
 @media(min-width:760px) {
-
-    .userInput{
-        width: 80vw;
+    
+    .userInput {
+        display: flex;
+        flex-direction: column;
+        width: 58vw;
         height: 40vh;
-        align-items: stretch;
+        margin: 50px auto;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
     }
+
+    #submit_button {
+        height: 7vh;
+        width: 50vw;
+        border-radius: 10px;
+        font-size: 16px;
+        background-color: aquamarine;
+    }
+    
     
 }    

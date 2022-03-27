@@ -19,6 +19,8 @@ const handleSubmit = async (event) => {
 
     // check what text was put into the form field
     let formText = document.getElementById('input_text').value
+    console.log("Input:")
+    console.log(formText)
     // check text in input box before performing API call
     let resultCheck1 = await Client.checkForName(formText)
     if (resultCheck1 == "fail") {

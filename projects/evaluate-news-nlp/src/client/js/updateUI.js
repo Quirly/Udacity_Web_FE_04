@@ -1,6 +1,8 @@
 // this function updates the UI after the API call and posts results
 
 function updateUI(polarity, agreement, subjectivity, confidence, irony) {
+    console.log(polarity)
+    let pol_interpretation = "None";
     if (polarity == "N+") {
         pol_interpretation = "Very Negative (N+)"
     }
@@ -19,6 +21,7 @@ function updateUI(polarity, agreement, subjectivity, confidence, irony) {
     if (polarity == "None") {
         pol_interpretation = "No Polarity (None)"
     }
+    document.getElementById('introduction').innerText = 'We have analyzed your text on MeaningCloud and got back: '
     document.getElementById('polarity').innerText = '1 - Polarity:  ' + pol_interpretation
     document.getElementById('agreement').innerText = '2 - Agreement: ' + agreement
     document.getElementById('subjectivity').innerText = '3 - Subjectivity: ' + subjectivity
