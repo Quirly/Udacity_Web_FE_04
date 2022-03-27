@@ -43,9 +43,10 @@ const handleSubmit = async (event) => {
     // show api response in console for control purposes
     console.log('API MeaningCloud response got back is: ')
     console.log(SentimentDataObject)
+    console.log(SentimentDataObject.score_tag)
 
     // update UI
-    Client.updateUI(SentimentDataObject.polarity, SentimentDataObject.agreement, SentimentDataObject.subjectivity, SentimentDataObject.confidence, SentimentDataObject.irony)
+    Client.updateUI(SentimentDataObject.score_tag, SentimentDataObject.agreement, SentimentDataObject.subjectivity, SentimentDataObject.confidence, SentimentDataObject.irony)
 
 }
 
