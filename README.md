@@ -15,7 +15,7 @@ was deployed in the  following repository.
 
 [Evaluate A News Article with Natural Language Processing](https://github.com/udacity/fend/tree/refresh-2019/projects/evaluate-news-nlp)
 
-MeaningCloud is a public provider for sentiment analysis of texts. One can use these existing web api endpoints for evaluating articles 
+MeaningCloud (https://www.meaningcloud.com) is a public service provider for sentiment analysis of texts. One can use these existing web api endpoints for evaluating articles 
 using Natural Language Processing algorithms. The scope of this project was to build a frontend application interacting with this MeaningCloud endpoint. This single page application shall provide a possibility for any user to type in a text in a form and to send this text to the API endpoint. The response, the sentiment analysis, shall then be displayed in the frontend to be read by the user.
 
 ## Basic Setup
@@ -27,7 +27,10 @@ Please follow these steps to get this app installed:
 * 3 - Choose a port and update the port (3000) in file index.js in src/server folder 
 * 4 - Update the chosen port also in file apikey.js in src/client folder
 * 5 - Save all changes
-* 6 - Start the app by typing in **npm start** in the console (Terminal)
+* 6 - Register at MeaningCloud (https://www.meaningcloud.com) and get an apikey for your requests
+* 7 - Create an **.env** file in your src-folder and type in "API_KEY=" and your apikey you received upon registration
+* 8 - Save the **.env** file
+* 9 - Start the app by typing in **npm start** in the console (Terminal)
 
 
 ## How to Use this App
